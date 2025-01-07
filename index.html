@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeoLang - Software Company</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #180d39, #1d1e20);
+            color: #e9f3f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #2a8e9e, #180d39);
+            padding: 10px 20px;
+            color: #e9f3f4;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #e9f3f4;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #1d1e20;
+        }
+
+        .main-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #2a8e9e, #180d39);
+            padding: 70px 20px;
+            color: #e9f3f4;
+            border-bottom: 5px solid #2a8e9e;
+        }
+
+        .main-banner .text {
+            max-width: 50%;
+        }
+
+        .main-banner h2 {
+            font-size: 4.5em;
+            margin-bottom: 10px;
+        }
+
+        .main-banner p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        .main-banner button {
+            background: linear-gradient(135deg, #1d1e20, #2a8e9e);
+            color: #e9f3f4;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .main-banner button:hover {
+            background: linear-gradient(135deg, #2a8e9e, #1d1e20);
+        }
+
+        .main-banner img {
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .services {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            color: #1d1e20;
+        }
+
+        .services h2 {
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-item {
+            background: linear-gradient(135deg, #2a8e9e, #3b3d40);
+            padding: 20px;
+            border-radius: 0 50px 0 50px;
+            color: #e9f3f4;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            font-size: 1.5em;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item p {
+            font-size: 0.6em;
+        }
+
+        .projects {
+            background: linear-gradient(180deg, #1d1e20, #180d39);
+            padding: 50px 20px;
+            text-align: center;
+            color: #e9f3f4;
+        }
+
+        .projects h2 {
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        .project-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .project-stat {
+            background: linear-gradient(135deg, #2a8e9e, #1d1e20);
+            padding: 20px 30px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            color: #e9f3f4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #2a8e9e;
+            border-radius: 10px;
+            background-color: #1d1e20;
+            color: #e9f3f4;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background: linear-gradient(135deg, #2a8e9e, #1d1e20);
+            color: #e9f3f4;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(135deg, #1d1e20, #2a8e9e);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>DeoLang</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="main-banner">
+        <div class="text">
+            <h2>Shape Your Idea</h2>
+            <p>The best tech buddy.</p>
+            <button>Contact Now</button>
+        </div>
+        <img src="https://via.placeholder.com/400x300" alt="Coder Image">
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-list">
+            <div class="service-item">
+                Custom Software Development
+                <p>Tailored solutions to meet your unique business needs</p>
+            </div>
+            <div class="service-item">
+                Web Development
+                <p>Responsive, scalable, and modern websites for all industries</p>
+            </div>
+            <div class="service-item">
+                Mobile App Development
+                <p>High-performance mobile apps for both iOS and Android</p>
+            </div>
+            <div class="service-item">
+                UI/UX Design
+                <p>Creating intuitive and visually appealing digital experiences</p>
+            </div>
+            <div class="service-item">
+                Cloud Solutions
+                <p>Cloud migration, hosting, and SaaS solutions for your business</p>
+            </div>
+            <div class="service-item">
+                QA & Testing
+                <p>Ensuring your software is bug-free and performance-optimized</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Our Achievements</h2>
+        <div class="project-stats">
+            <div class="project-stat">Projects Delivered: 120</div>
+            <div class="project-stat">Ongoing Projects: 15</div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+
+</html>
